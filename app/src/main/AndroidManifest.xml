@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication"
+        tools:targetApi="31">
+        <activity
+            android:name=".payment1"
+            android:exported="false"/>
+        <activity
+            android:name=".textbook"
+            android:exported="false" />
+        <activity
+            android:name=".architecture"
+            android:exported="false" />
+        <activity
+            android:name=".chocolate"
+            android:exported="false" />
+        <activity
+            android:name=".cart"
+            android:exported="false" />
+        <activity
+            android:name=".CustomAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".notebooks"
+            android:exported="false" />
+        <activity
+            android:name=".drawpenc"
+            android:exported="false" />
+        <activity
+            android:name=".drawpen"
+            android:exported="false" />
+        <activity
+            android:name=".stationary"
+            android:exported="false" />
+        <activity
+            android:name=".dash2"
+            android:exported="false" />
+        <activity
+            android:name=".slides"
+            android:exported="false" />
+        <activity
+            android:name=".ui.theme.slides"
+            android:exported="false" />
+        <activity
+            android:name=".dash"
+            android:exported="false" />
+        <activity
+            android:name=".Signup"
+            android:exported="false" />
+        <activity
+            android:name=".Login"
+            android:exported="false" />
+        <activity
+            android:name=".settings"
+            android:exported="false" />
+        <activity
+            android:name=".ActAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApplication">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

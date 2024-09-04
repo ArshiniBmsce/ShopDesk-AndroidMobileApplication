@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#94DDDE">
+
+    <!-- App Bar Layout -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#00FFFFFF"
+        android:layout_marginTop="25dp">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/curve_text" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Use NestedScrollView to make content scrollable -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <!-- Peach-colored rectangle containing image buttons and ViewPager -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Image Buttons -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:gravity="center"
+                    android:background="#F7B4A7"
+                    android:orientation="horizontal"
+
+                    >
+
+                    <!-- Button 1 -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        >
+
+                        <ImageButton
+                            android:id="@+id/button"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="8dp"
+
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:contentDescription="button1 description"
+                            android:src="@drawable/notebooki" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Notebook"
+                            android:textColor="#000000" android:layout_gravity="center" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageButton
+                            android:id="@+id/button2"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="8dp"
+
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:contentDescription="Textbook"
+                            android:src="@drawable/stationaryi" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Stationery"
+                            android:textColor="#000000" android:layout_gravity="center" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageButton
+                            android:id="@+id/button3"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="8dp"
+
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:contentDescription="chocolates"
+                            android:src="@drawable/architecture" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="architecture"
+                            android:textColor="#000000" android:layout_gravity="center"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageButton
+                            android:id="@+id/button4"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:contentDescription="button1 description"
+                            android:src="@drawable/chocolatei" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Chocolates"
+                            android:textColor="#000000" android:layout_gravity="center"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageButton
+                            android:id="@+id/button5"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="8dp"
+
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:contentDescription="Stationary"
+                            android:src="@drawable/txb" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="TextBook"
+                            android:textColor="#000000" android:layout_gravity="center"/>
+
+                    </LinearLayout>
+
+
+                    <!-- Add more LinearLayout patterns for additional buttons -->
+
+                </LinearLayout>
+
+                <!-- Space as a separator -->
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewPager2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="0dp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <!-- Card 1 -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1">
+
+                    <!-- Card content, like image and text -->
+                        <ImageButton
+                            android:id="@+id/ib1"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:background="@android:color/transparent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/card1" /> <!-- Set the background to transparent -->
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:layout_marginTop="165dp"
+                        android:text="For discounts on pencils"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="20dp"
+                        android:outlineAmbientShadowColor="@color/black"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1">
+
+                        <!-- Card content, like image and text -->
+                        <ImageButton
+                            android:id="@+id/ib2"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:background="@android:color/transparent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/card2" /> <!-- Set the background to transparent -->
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="16dp"
+                            android:layout_marginTop="165dp"
+                            android:text="Notebooks and More!"
+                            android:textColor="#000000"
+                            android:textSize="18sp" />
+
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <!-- Card 1 -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="20dp"
+                        android:outlineAmbientShadowColor="@color/black"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1">
+
+                        <!-- Card content, like image and text -->
+                        <ImageButton
+                            android:id="@+id/ib3"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:background="@android:color/transparent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/card3" /> <!-- Set the background to transparent -->
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="16dp"
+                            android:layout_marginTop="165dp"
+                            android:text="Offers on Chocolates!"
+                            android:textColor="#000000"
+                            android:textSize="18sp" />
+
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="20dp"
+                        android:outlineAmbientShadowColor="@color/black"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1">
+
+                        <!-- Card content, like image and text -->
+                        <ImageButton
+                            android:id="@+id/ib4"
+                            android:layout_width="match_parent"
+                            android:layout_height="180dp"
+                            android:background="@android:color/transparent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/card4" /> <!-- Set the background to transparent -->
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="16dp"
+                            android:layout_marginTop="165dp"
+                            android:text="Exclusive Notebooks"
+                            android:textColor="#000000"
+                            android:textSize="18sp" />
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <!-- Card 1 -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="20dp"
+                        android:outlineAmbientShadowColor="@color/black"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1">
+
+                        <!-- Card content, like image and text -->
+                        <ImageButton
+                            android:id="@+id/ib5"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:background="@android:color/transparent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/card6" /> <!-- Set the background to transparent -->
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="16dp"
+                            android:layout_marginTop="165dp"
+                            android:text="Best of Stationary"
+                            android:textColor="#000000"
+                            android:textSize="18sp" />
+
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="20dp"
+                        android:outlineAmbientShadowColor="@color/black"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1">
+
+                        <!-- Card content, like image and text -->
+                        <ImageButton
+                            android:id="@+id/ib6"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:background="@android:color/transparent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/card5" /> <!-- Set the background to transparent -->
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="16dp"
+                            android:layout_marginTop="165dp"
+                            android:text="Pens,Pencils and more"
+                            android:textColor="#000000"
+                            android:textSize="18sp" />
+
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <!-- Card 2, 3, and so on... -->
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="75dp"
+                android:text=""
+                android:background="#94DDDE"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

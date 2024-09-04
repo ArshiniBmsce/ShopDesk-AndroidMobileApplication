@@ -1,0 +1,7 @@
+<!-- styles.xml -->
+<resources>
+    <style name="Theme.MyApplication" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <!-- Add other style attributes as needed -->
+    </style>
+</resources>

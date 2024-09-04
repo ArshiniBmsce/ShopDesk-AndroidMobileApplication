@@ -1,0 +1,64 @@
+<!-- res/layout/activity_pen.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".drawpen">
+
+    <Button
+        android:id="@+id/b8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:background="@color/emerald"
+        android:text="BACK"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/b7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="170dp"
+        android:layout_marginTop="700dp"
+        android:text="Clear"
+        android:background="@color/emerald"
+        android:textColor="@color/white"/>
+
+    <Button
+        android:id="@+id/blueButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/b7"
+        android:layout_marginTop="-269dp"
+        android:text="Blue"
+        android:background="#0A1B4D"
+        android:textColor="@color/white"/>
+
+    <Button
+        android:id="@+id/blackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/blueButton"
+        android:layout_marginTop="16dp"
+        android:text="Black"
+        android:background="@color/black"
+        android:textColor="@color/white"/>
+
+    <Button
+        android:id="@+id/redButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/blackButton"
+        android:layout_marginTop="16dp"
+        android:background="#E71159"
+        android:textColor="@color/white"
+        android:text="red" />
+
+    <com.example.myapplication.PenDrawingView
+        android:id="@+id/penDrawingView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>
